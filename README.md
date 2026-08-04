@@ -111,17 +111,5 @@ streamlit run streamlit_app.py
 python app.py
 ```
 
-## Known limitations
 
-- Passwords are stored in plain text in `Database.json` — fine for a demo, not for production. A real version would hash passwords (e.g. bcrypt) and use a proper database (SQLite/PostgreSQL).
-- `Database.json` and `.env` are excluded from version control via `.gitignore`.
 
-## Roadmap
-
-- [ ] Text Summarization
-- [ ] Password hashing
-- [ ] Deploy to Streamlit Community Cloud / Hugging Face Spaces
-
-## License
-
-MIT
