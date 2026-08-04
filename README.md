@@ -70,4 +70,4 @@ flowchart LR
 - `Database.json` — Local JSON store for users (simple demo DB).
 - `.env` — Environment variables (not committed; contains `HF_TOKEN`).
 - `requirements.txt` — Python dependencies.
-- `venv/` — Virtual environment 
+- `venv/` — Virtual environment # NLP_ToolKit
