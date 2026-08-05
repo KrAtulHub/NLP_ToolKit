@@ -324,7 +324,7 @@ def render_ner_page() -> None:
                             with badge_col:
                                 st.badge(
                                     entity_type,
-                                    color=ENTITY_BADGE_COLORS.get(entity_type, "gray"),
+                                    color=ENTITY_BADGE_COLORS.get(entity_type, "gray"), # type: ignore
                                 )
                 except Exception as exc:
                     st.error(f"Analysis failed: {exc}")
