@@ -4,13 +4,13 @@ from ner import ner
 from sn import sentiment
 from TC import text_classification
 
-
+# Main_Class
 class NLPApp:
     def __init__(self):
         self.__Load_Database()
         self.__First_Menu()
 
-    # Load Database
+    ## Loads Database from Database.json
     def __Load_Database(self):
         try:
             with open("Database.json", "r") as file:
@@ -18,12 +18,12 @@ class NLPApp:
         except FileNotFoundError:
             self.__Database = {}
 
-    # Save Database
+    ## Save Data
     def __Save_Database(self):
         with open("Database.json", "w") as file:
             json.dump(self.__Database, file, indent=4)
 
-    # First Menu
+    ## First Menu
     def __First_Menu(self):
         print("=" * 30)
         print("Hi, How would you like to Proceed")
@@ -47,7 +47,8 @@ class NLPApp:
             print("Thank You!")
             exit()
 
-    # Register
+    
+    ## Register
     def __Register(self):
 
         print("\n_____ Welcome _____")
@@ -76,7 +77,8 @@ class NLPApp:
             print("Registration Successful")
             self.__Login()
 
-    # Login
+    
+    ## Login
     def __Login(self):
         
         print("__Login__")
@@ -101,7 +103,8 @@ class NLPApp:
             print("Email Not Registered")
             self.__Register()
 
-    # Second Menu
+    
+    ## Second Menu
     def __Second_Menu(self):
 
         print("\n" + "=" * 30)
@@ -135,6 +138,7 @@ class NLPApp:
             self.__Second_Menu()
 
     
+    ## Named Entity Recognition
     def __NER(self):
 
         paragraph = input("\nEnter Paragraph: ")
@@ -184,6 +188,7 @@ class NLPApp:
         self.__Second_Menu()
 
     
+    ## Sentiment Analysis
     def __SN(self):
         paragraph = input("\nEnter Text: ")
         result = sentiment(paragraph)
@@ -204,6 +209,7 @@ class NLPApp:
 
 
     
+    ## Text Classification
     def __TC(self):
 
         paragraph = input("\nEnter Text: ")
